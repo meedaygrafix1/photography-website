@@ -1,0 +1,8 @@
+{
+    "name": "root-deploy-proxy",
+    "private": true,
+    "scripts": {
+        "postinstall": "cd lumina-studio && npm install",
+        "build": "cd lumina-studio && npm run build && node -e \"require('fs').cpSync('dist', '../dist', {recursive: true})\""
+    }
+}
