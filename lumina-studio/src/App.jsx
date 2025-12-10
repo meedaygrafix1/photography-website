@@ -96,7 +96,7 @@ const Navigation = ({ activePage, setPage, isScrolled }) => {
             <button
               key={link}
               onClick={() => handleNav(link)}
-              className={`text - sm uppercase tracking - widest transition - colors duration - 300 hover: text - amber - 500 ${activePage === link ? 'text-amber-500 font-semibold' : 'text-neutral-300'} `}
+              className={`text-sm uppercase tracking-widest transition-colors duration-300 hover:text-amber-500 ${activePage === link ? 'text-amber-500 font-semibold' : 'text-neutral-300'} `}
             >
               {link}
             </button>
@@ -116,7 +116,7 @@ const Navigation = ({ activePage, setPage, isScrolled }) => {
             <button
               key={link}
               onClick={() => handleNav(link)}
-              className={`text - lg uppercase tracking - widest ${activePage === link ? 'text-amber-500' : 'text-neutral-300'} `}
+              className={`text-lg uppercase tracking-widest ${activePage === link ? 'text-amber-500' : 'text-neutral-300'} `}
             >
               {link}
             </button>
@@ -329,7 +329,7 @@ const ImagesPage = () => {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px - 6 py - 2 rounded - full text - sm font - bold tracking - wider transition - all ${filter === cat
+              className={`px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all ${filter === cat
                 ? 'bg-amber-600 text-white'
                 : 'bg-neutral-900 text-neutral-400 hover:text-white'
                 } `}
@@ -456,7 +456,7 @@ const PricingPage = ({ setPage }) => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {PRICING.map((tier, i) => (
-          <div key={i} className={`relative flex flex - col p - 8 rounded - 2xl border ${tier.highlight ? 'bg-neutral-900 border-amber-600' : 'bg-neutral-900/50 border-neutral-800'} transition - transform hover: -translate - y - 2`}>
+          <div key={i} className={`relative flex flex-col p-8 rounded-2xl border ${tier.highlight ? 'bg-neutral-900 border-amber-600' : 'bg-neutral-900/50 border-neutral-800'} transition-transform hover:-translate-y-2`}>
             {tier.highlight && (
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
                 Most Popular
@@ -474,7 +474,7 @@ const PricingPage = ({ setPage }) => (
             </ul>
             <button
               onClick={() => setPage('Book')}
-              className={`w - full py - 4 rounded - xl font - bold uppercase tracking - widest text - sm transition - colors ${tier.highlight
+              className={`w-full py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-colors ${tier.highlight
                 ? 'bg-amber-600 text-white hover:bg-amber-700'
                 : 'bg-neutral-800 text-neutral-400 hover:bg-white hover:text-black'
                 } `}
