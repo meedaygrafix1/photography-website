@@ -71,7 +71,7 @@ const PRICING = [
 const Navigation = ({ activePage, setPage, isScrolled }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const links = ['Home', 'Images', 'Videos', 'Services', 'Pricing', 'About', 'Book'];
+  const links = ['Home', 'Images', 'Videos', 'Services', 'Pricing', 'About'];
 
   const handleNav = (page) => {
     setPage(page);
@@ -101,6 +101,12 @@ const Navigation = ({ activePage, setPage, isScrolled }) => {
               {link}
             </button>
           ))}
+          <button
+            onClick={() => handleNav('Book')}
+            className="bg-amber-600 text-white px-5 py-2 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-amber-700 transition-all transform hover:scale-105 shadow-md hover:shadow-amber-900/20"
+          >
+            Book Now
+          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -121,6 +127,12 @@ const Navigation = ({ activePage, setPage, isScrolled }) => {
               {link}
             </button>
           ))}
+          <button
+            onClick={() => handleNav('Book')}
+            className="bg-amber-600 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-lg hover:bg-amber-700 transition-colors mt-4"
+          >
+            Book Session
+          </button>
         </div>
       )}
     </nav>
